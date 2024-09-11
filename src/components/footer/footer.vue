@@ -1,0 +1,96 @@
+<script setup>
+import {onMounted, ref} from 'vue';
+import gsap from 'gsap';
+import PyCharm from "@/components/footer/icons/PyCharm.vue";
+import Figma from "@/components/footer/icons/Figma.vue";
+import Telegram from "@/components/about/icons/telegram.vue";
+import Github from "@/components/about/icons/github.vue";
+import Linkedin from "@/components/about/icons/linkedin.vue";
+import VueColored from "@/components/footer/icons/VueColored.vue";
+import GsapIcon from "@/components/footer/icons/GsapIcon.vue";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import translation from "@/translations/footerTranslations.json";
+import {initTranslations} from "@/utils.js";
+
+const _ = initTranslations(translation)
+
+gsap.registerPlugin(ScrollTrigger)
+const tranlateY = ref(-300)
+
+onMounted(() => {
+})
+</script>
+<template>
+  <footer>
+    <div class="row">
+      <p>{{_('soul-title')}}</p>
+      <div class="icons">
+        <a href="https://www.figma.com/design/YDCaTj1eoUg4FhTlPsKXBI/Untitled?node-id=18-16968&t=EoZa8WinitgN2kJs-1">
+          <Figma/>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <p>{{_('mind-title')}}</p>
+      <div class="icons">
+        <PyCharm/>
+        <VueColored/>
+        <GsapIcon/>
+      </div>
+    </div>
+    <div class="row">
+      <p>{{_('connect-title')}}</p>
+      <div class="icons">
+        <a href="https://t.me/hustncn" target="_blank">
+          <Telegram/>
+        </a>
+        <a href="http://github.com/korolev-oleg" target="_blank">
+          <Github/>
+        </a>
+        <a class="h-linkedin hidden" href="https://www.linkedin.com/in/korolev-oleg" target="_blank">
+          <Linkedin/>
+        </a>
+      </div>
+    </div>
+
+  </footer>
+</template>
+
+<style scoped>
+footer {
+  background: var(--color-background);
+  color: var(--color-text);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  align-content: center;
+  border-radius: 44px 44px 0 0;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 300!important;
+}
+@media(min-width: 800px){
+  footer{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding: 100px;
+  }
+}
+
+footer > .timeline {
+  height: 600px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+</style>
