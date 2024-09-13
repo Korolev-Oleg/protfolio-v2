@@ -49,7 +49,6 @@ onMounted(() => {
         pinSpacing: isMobile || isLast,
         scrub: 1,
         pin: true,
-        markers: true,
         // snap: {
         //   snapTo: 0.5,
         //   duration: 0.1
