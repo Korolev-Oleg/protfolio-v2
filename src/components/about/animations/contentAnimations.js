@@ -46,14 +46,14 @@ export async function executeContentAnimations() {
 
       paragraphs.forEach((paragraph) => {
         if (isElementVisible(paragraph) && paragraph.innerText.replace(/\s+/g, '')) {
-          // gsap.to(`#${paragraph.id}`, {
-          //   call: () => {
-          //     new ScrambleText(paragraph, {
-          //       timeOffset: isMobile ? 2 : 1,
-          //       chars: chars
-          //     }).start().play();
-          //   }
-          // }, '<');
+          gsap.to(`#${paragraph.id}`, {
+            call: () => {
+              new ScrambleText(paragraph, {
+                timeOffset: isMobile ? 2 : 1,
+                chars: chars
+              }).start().play();
+            }
+          }, '<');
         }
         if (paragraph.hasAttribute('skip')) {
           return null;
