@@ -5,7 +5,10 @@ export function syncLocale(translationStore) {
   const userLanguage = navigator.language || navigator.userLanguage;
   if (userLanguage.startsWith('ru')) {
     translationStore.currentLocale = 'ru';
+  } else {
+    translationStore.currentLocale = 'en';
   }
+  document.getElementsByTagName('html')[0].lang = translationStore.currentLocale
 }
 
 export function generateID(name, length = 5) {
@@ -49,10 +52,7 @@ export function loadResources(loadingProgressRef) {
 
 export function initTranslations(translations) {
   return (key) => {
-    const userLanguage = navigator.language || navigator.userLanguage;
-    if (userLanguage.startsWith('ru')) {
-      translationStore.currentLocale = 'ru';
-    }
+    syncLocale(translationStore)
     return translations[translationStore.currentLocale][key]
   }
 }

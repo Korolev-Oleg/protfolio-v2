@@ -45,18 +45,18 @@ export async function executeContentAnimations() {
       let {isDesktop, isMobile} = context.conditions;
 
       paragraphs.forEach((paragraph) => {
-        if (isElementVisible(paragraph) && paragraph.innerText) {
-          gsap.to(`#${paragraph.id}`, {
-            call: () => {
-              new ScrambleText(paragraph, {
-                timeOffset: isMobile ? 2 : 1,
-                chars: chars
-              }).start().play();
-            }
-          }, '<');
+        if (isElementVisible(paragraph) && paragraph.innerText.replace(/\s+/g, '')) {
+          // gsap.to(`#${paragraph.id}`, {
+          //   call: () => {
+          //     new ScrambleText(paragraph, {
+          //       timeOffset: isMobile ? 2 : 1,
+          //       chars: chars
+          //     }).start().play();
+          //   }
+          // }, '<');
         }
         if (paragraph.hasAttribute('skip')) {
-          return;
+          return null;
         }
         tl.to(paragraph, {
           duration: 1,
@@ -69,7 +69,8 @@ export async function executeContentAnimations() {
           },
           text: _(paragraph.id),
           ease: 'power2.inOut'
-        });
+        })
+
       })
     }
   )

@@ -2,6 +2,8 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
-import i18n from "@/i18n.js";
+import VueSmoothScroll from 'vue3-smooth-scroll'
+const app = createApp(App)
+app.use(VueSmoothScroll, {})
+app.mount('#app')
 
-createApp(App).use(i18n).mount('#app')

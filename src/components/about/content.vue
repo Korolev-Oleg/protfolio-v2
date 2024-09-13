@@ -5,10 +5,8 @@ import gsap from 'gsap';
 import {onMounted, watch} from "vue";
 import TextPlugin from "gsap/TextPlugin";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import ScrambleText from "@/components/scrambleText.js";
 import {initTranslations, isElementVisible} from "@/utils.js";
 import {executeContentAnimations} from "@/components/about/animations/contentAnimations.js";
-import {executeHeaderAnimations} from "@/components/about/animations/headerAnimations.js";
 
 const _=initTranslations(translations)
 

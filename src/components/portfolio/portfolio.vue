@@ -24,14 +24,15 @@ import {onMounted, ref} from "vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import translations from "@/translations/portfolioTranslations.json";
-import translationStore from "@/store/global.js";
+import {initTranslations} from "@/utils.js";
 
-const _ = (key) => translations[translationStore.currentLocale][key];
+const _ = initTranslations(translations);
 const portfolio = ref(null);
 
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
+  window.scrollTo(0, 0);
   const tl = gsap.timeline();
 
   // slide up header
@@ -67,24 +68,24 @@ onMounted(() => {
 <template>
   <section id="portfolio" :ref="portfolio">
     <PortfolioCover :Icon="TitanControlIcon" title="TitanControl">
-        <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide1]"
-                        :description="_('titan-control-slide-1')"/>
-        <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide2]"
-                        :description="_('titan-control-slide-2')"/>
-        <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide3]"
-                        :description="_('titan-control-slide-3')"/>
-        <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide4]"
-                        :description="_('titan-control-slide-4')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide1]"
+                      :description="_('titan-control-slide-1')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide2]"
+                      :description="_('titan-control-slide-2')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide3]"
+                      :description="_('titan-control-slide-3')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide4]"
+                      :description="_('titan-control-slide-4')"/>
     </PortfolioCover>
     <PortfolioCover :Icon="ProdlogisticaIcon" title="Prodlogistica">
-        <PortfolioSlide class="portfolio-slide" :images="[ProdlogisticaSlide1]"
-                        :description="_('prodlogistica-slide-1')"/>
-        <PortfolioSlide class="portfolio-slide" :images="[ProdlogisticaSlide2]"
-                        :description="_('prodlogistica-slide-2')"/>
-        <PortfolioSlide class="portfolio-slide" :images="[ProdlogisticaSlide3]"
-                        :description="_('prodlogistica-slide-3')"/>
-        <PortfolioSlide class="portfolio-slide" :images="[ProdlogisticaSlide4]"
-                        :description="_('prodlogistica-slide-4')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[ProdlogisticaSlide1]"
+                      :description="_('prodlogistica-slide-1')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[ProdlogisticaSlide2]"
+                      :description="_('prodlogistica-slide-2')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[ProdlogisticaSlide3]"
+                      :description="_('prodlogistica-slide-3')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[ProdlogisticaSlide4]"
+                      :description="_('prodlogistica-slide-4')"/>
     </PortfolioCover>
     <PortfolioCover :Icon="TendManagerIcon" title="TendManager">
       <PortfolioSlide class="portfolio-slide" :images="[TendManager1]"

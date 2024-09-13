@@ -14,7 +14,7 @@ import translations from '@/translations/aboutTranslations.json';
 import Telegram from "@/components/about/icons/telegram.vue";
 import Github from "@/components/about/icons/github.vue";
 import Linkedin from "@/components/about/icons/linkedin.vue";
-import translationStore, {loader} from "@/store/global.js";
+import {loader} from "@/store/global.js";
 import {onMounted, watch} from "vue";
 import TextPlugin from "gsap/TextPlugin";
 import gsap from 'gsap';
@@ -27,6 +27,10 @@ gsap.registerPlugin(TextPlugin);
 
 watch(loader.isLoading, (isLoading) => {
   executeHeaderAnimations()
+})
+
+onMounted(() => {
+  window.scrollTo(0, 0);
 })
 
 </script>

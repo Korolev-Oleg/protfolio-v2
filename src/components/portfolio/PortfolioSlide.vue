@@ -40,7 +40,7 @@ onMounted(() => {
 
     let currentSlides = slide.parentElement.getElementsByClassName('portfolio-slide')
     let isLastCoverSlide = currentSlides[currentSlides.length - 1].id === slide.id
-    let end = isLastCoverSlide? '65% 0%' : '100% 30%'
+    let end = isLastCoverSlide ? '65% 0%' : '100% 30%'
     tl.fromTo(slide, {opacity: 0, x: 100}, {
       scrollTrigger: {
         trigger: slide,
@@ -49,7 +49,15 @@ onMounted(() => {
         pinSpacing: isMobile || isLast,
         scrub: 1,
         pin: true,
-        anticipatePin: 1,
+        markers: true,
+        // snap: {
+        //   snapTo: 0.5,
+        //   duration: 0.1
+        // }
+
+        // onEnterBack(){
+        //   slide.classList.remove('invisible')
+        // }
       },
       x: 0,
       opacity: 3,
