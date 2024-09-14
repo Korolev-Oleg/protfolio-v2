@@ -29,17 +29,11 @@ export function loadResources(loadingProgressRef) {
   const resources = document.querySelectorAll('img, link[rel="stylesheet"]');
   const totalResources = resources.length;
   let loadedResources = 0;
-  console.log('resources count', totalResources)
 
   const updateProgress = () => {
     loadedResources++;
     const progress = Math.round((loadedResources / totalResources) * 100);
     loader.progress = progress;
-
-    console.log('Progress:', progress)
-    // if (loadedResources >= totalResources) {
-    //   clearTimeout(timeout);
-    // }
   };
 
   resources.forEach((resource) => {
@@ -55,6 +49,24 @@ export function initTranslations(translations) {
     syncLocale(translationStore)
     return translations[translationStore.currentLocale][key]
   }
+}
+
+export function getDeviceType() {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  if (/android/i.test(userAgent)) {
+    return 'Mobile';
+  }
+
+  if (/iPad|iPhone|iPod/.test(userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+    return 'Mobile';
+  }
+
+  if (window.innerWidth < 768) {
+    return 'Mobile';
+  }
+
+  return 'Desktop';
 }
 
 export default {generateID, syncLocale, isElementVisible};

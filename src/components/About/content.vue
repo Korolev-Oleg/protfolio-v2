@@ -6,7 +6,7 @@ import {onMounted, watch} from "vue";
 import TextPlugin from "gsap/TextPlugin";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import {initTranslations, isElementVisible} from "@/utils.js";
-import {executeContentAnimations} from "@/components/about/animations/contentAnimations.js";
+import {executeContentAnimations} from "@/components/About/animations/contentAnimations.js";
 
 const _=initTranslations(translations)
 

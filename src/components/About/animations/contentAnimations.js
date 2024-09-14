@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import ScrambleText from "@/components/scrambleText.js";
+import ScrambleText from "@/libs/scrambleText.js";
 import {initTranslations, isElementVisible} from "@/utils.js";
 import translations from "@/translations/aboutTranslations.json";
 
@@ -45,16 +45,17 @@ export async function executeContentAnimations() {
       let {isDesktop, isMobile} = context.conditions;
 
       paragraphs.forEach((paragraph) => {
-        if (isElementVisible(paragraph) && paragraph.innerText.replace(/\s+/g, '')) {
-          gsap.to(`#${paragraph.id}`, {
-            call: () => {
-              new ScrambleText(paragraph, {
-                timeOffset: isMobile ? 2 : 1,
-                chars: chars
-              }).start().play();
-            }
-          }, '<');
-        }
+        // scrable text
+        // if (isElementVisible(paragraph) && paragraph.innerText.replace(/\s+/g, '')) {
+        //   gsap.to(`#${paragraph.id}`, {
+        //     call: () => {
+        //       new ScrambleText(paragraph, {
+        //         timeOffset: isMobile ? 2 : 1,
+        //         chars: chars
+        //       }).start().play();
+        //     }
+        //   }, '<');
+        // }
         if (paragraph.hasAttribute('skip')) {
           return null;
         }

@@ -1,13 +1,13 @@
 <script setup>
 import {onMounted, ref} from 'vue';
 import gsap from 'gsap';
-import PyCharm from "@/components/footer/icons/PyCharm.vue";
-import Figma from "@/components/footer/icons/Figma.vue";
-import Telegram from "@/components/about/icons/telegram.vue";
-import Github from "@/components/about/icons/github.vue";
-import Linkedin from "@/components/about/icons/linkedin.vue";
-import VueColored from "@/components/footer/icons/VueColored.vue";
-import GsapIcon from "@/components/footer/icons/GsapIcon.vue";
+import PyCharm from "@/components/Footer/icons/PyCharm.vue";
+import Figma from "@/components/Footer/icons/Figma.vue";
+import Telegram from "@/components/About/icons/telegram.vue";
+import Github from "@/components/About/icons/github.vue";
+import Linkedin from "@/components/About/icons/linkedin.vue";
+import VueColored from "@/components/Footer/icons/VueColored.vue";
+import GsapIcon from "@/components/Footer/icons/GsapIcon.vue";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import translation from "@/translations/footerTranslations.json";
 import {initTranslations} from "@/utils.js";
@@ -15,7 +15,6 @@ import {initTranslations} from "@/utils.js";
 const _ = initTranslations(translation)
 
 gsap.registerPlugin(ScrollTrigger)
-const tranlateY = ref(-300)
 
 onMounted(() => {
 })
@@ -25,7 +24,7 @@ onMounted(() => {
     <div class="row">
       <p>{{_('soul-title')}}</p>
       <div class="icons">
-        <a href="https://www.figma.com/design/YDCaTj1eoUg4FhTlPsKXBI/Untitled?node-id=18-16968&t=EoZa8WinitgN2kJs-1">
+        <a href="https://www.figma.com/design/YDCaTj1eoUg4FhTlPsKXBI/Untitled?node-id=18-16968&t=EoZa8WinitgN2kJs-1" target="_blank">
           <Figma/>
         </a>
       </div>

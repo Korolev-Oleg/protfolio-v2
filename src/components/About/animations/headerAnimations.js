@@ -1,5 +1,5 @@
-import lockScroll from "@/components/about/services.js";
-import ScrambleText from "@/components/scrambleText.js";
+import lockScroll from "@/components/About/services.js";
+import ScrambleText from "@/libs/scrambleText.js";
 import gsap from "gsap";
 import translationStore from "@/store/global.js";
 import translations from "@/translations/aboutTranslations.json";

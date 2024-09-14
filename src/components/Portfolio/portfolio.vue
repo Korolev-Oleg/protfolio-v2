@@ -1,9 +1,9 @@
 <script setup>
-import PortfolioCover from "@/components/portfolio/PortfolioCover.vue";
-import TitanControlIcon from "@/components/portfolio/icons/titanControlIcon.vue";
-import ProdlogisticaIcon from "@/components/portfolio/icons/prodlogisticaIcon.vue";
-import TendManagerIcon from "@/components/portfolio/icons/TendManagerIcon.vue";
-import PortfolioSlide from "@/components/portfolio/PortfolioSlide.vue";
+import PortfolioCover from "@/components/Portfolio/PortfolioCover.vue";
+import TitanControlIcon from "@/components/Portfolio/icons/titanControlIcon.vue";
+import ProdlogisticaIcon from "@/components/Portfolio/icons/prodlogisticaIcon.vue";
+import TendManagerIcon from "@/components/Portfolio/icons/TendManagerIcon.vue";
+import PortfolioSlide from "@/components/Portfolio/PortfolioSlide.vue";
 
 import TitanControlSlide1 from "./asserts/TitanControlSlide1.png";
 import TitanControlSlide2 from "./asserts/TitanControlSlide2.png";
