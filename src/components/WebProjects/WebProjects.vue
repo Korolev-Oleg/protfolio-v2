@@ -78,3 +78,8 @@ onMounted(() => {
   </section>
 </template>
 
+<style scoped>
+.description a:hover {
+  color: white
+}
+</style>

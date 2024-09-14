@@ -2,7 +2,7 @@
 
 # Directory containing MP4 files
 input_dir="./"
-output_dir="../gifs"
+output_dir="../gif"
 
 # Create output directory if it doesn't exist
 mkdir -p "$output_dir"
@@ -15,7 +15,7 @@ for input_file in "$input_dir"/*.mp4; do
   # Define the output file path
   output_file="$output_dir/$base_name.gif"
 
-  # Convert MP4 to GIF with 30fps
+  # Convert MP4 to GIF with 30fps but small size
   ffmpeg -i "$input_file" -vf "fps=30,scale=320:-1:flags=lanczos" -c:v pam -f image2pipe - | convert -delay 3 - -loop 0 "$output_file"
 
   echo "Converted $input_file to $output_file"
