@@ -1,6 +1,6 @@
 <script setup>
 import {onMounted} from "vue";
-import ChevronDownIcon from "@/components/ChevronDownIcon.vue";
+import ChevronDownIcon from "@/components/Service/ChevronDownIcon.vue";
 import gsap from "gsap";
 
 onMounted(() => {

@@ -9,7 +9,7 @@ export const loadingProgress = ref(0)
 export const loader = reactive({
   progress: 0,
   isLoading: () => {
-    return loader.progress < 90
+    return loader.progress < 78
   },
 })
 

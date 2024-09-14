@@ -1,13 +1,11 @@
-<template>
-  <div class="loading-screen" id="loading-section">
-    <p>Loading... {{ loader.progress }}%</p>
-  </div>
-</template>
-
 <script setup>
-import {watch, onMounted} from 'vue';
+import {ref, watch} from 'vue';
 import {loader} from "@/store/global.js";
-import gsap from "gsap";
+import NumberAnimation from "vue-number-animation";
+
+
+const loadingSpan = ref(null)
+const number = ref(null)
 
 
 watch(loader.isLoading, (isLoading) => {
@@ -17,6 +15,19 @@ watch(loader.isLoading, (isLoading) => {
 })
 
 </script>
+
+<template>
+  <div class="loading-screen" id="loading-section">
+    <p>Loading...
+      <NumberAnimation
+          ref="number"
+          :to="loader.progress"
+          :format="(n)=>n.toFixed(0)"
+          duration=".5"
+      />
+    </p>
+  </div>
+</template>
 
 <style>
 .loading-screen {

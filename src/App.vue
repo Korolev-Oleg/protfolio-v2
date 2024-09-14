@@ -3,8 +3,8 @@ import {onMounted} from 'vue';
 import translationStore, {loadingProgress} from '@/store/global.js';
 import {loadResources, syncLocale} from '@/utils.js';
 
-import LoadingScreen from "@/components/LoadingScreen.vue";
-import ScrollBar from "@/components/scrollBar.vue";
+import LoadingScreen from "@/components/Service/LoadingScreen.vue";
+import ScrollBar from "@/components/Service/scrollBar.vue";
 import About from "@/components/About/about.vue";
 import Portfolio from "@/components/Portfolio/portfolio.vue"
 import WebProjects from "@/components/WebProjects/WebProjects.vue";

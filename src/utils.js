@@ -26,7 +26,7 @@ export function isElementVisible(element) {
 }
 
 export function loadResources(loadingProgressRef) {
-  const resources = document.querySelectorAll('img, link[rel="stylesheet"]');
+  const resources = document.querySelectorAll('img, link[rel="stylesheet"], video');
   const totalResources = resources.length;
   let loadedResources = 0;
 

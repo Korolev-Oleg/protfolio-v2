@@ -8,7 +8,7 @@ import {initTranslations} from "@/utils.js";
 const _ = initTranslations(translations)
 
 export async function executeHeaderAnimations() {
-  lockScroll(1400)
+  lockScroll(1000)
   new ScrambleText(document.getElementById('name'), {
     timeOffset: 160,
     chars: ["コ", "ー", "ヒ", "比", "ス", "阝", "プ", "ビ", "州", "ル", "ワ", "イ", "ン", "小", "贝", "比", "巴", "小", "井", "己", "工"]
