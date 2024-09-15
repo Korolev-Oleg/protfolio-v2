@@ -46,7 +46,7 @@ onMounted(() => {
         <a href="http://github.com/korolev-oleg" target="_blank">
           <Github/>
         </a>
-        <a class="h-linkedin hidden" href="https://www.linkedin.com/in/korolev-oleg" target="_blank">
+        <a class="h-linkedin" href="https://www.linkedin.com/in/korolev-oleg" target="_blank">
           <Linkedin/>
         </a>
       </div>
@@ -91,5 +91,8 @@ footer > .timeline {
   gap: 20px;
   align-items: center;
   justify-content: center;
+}
+.icons a {
+  color: black;
 }
 </style>

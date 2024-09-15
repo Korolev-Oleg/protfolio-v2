@@ -12,6 +12,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@grcmichael/gscroll": "^1.0.15",
+    "@vueuse/core": "^11.0.3",
     "animejs": "^3.2.2",
     "ascii-image": "^3.0.1",
     "gsap": "npm:gsap-trial@^3.12.5",

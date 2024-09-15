@@ -3,14 +3,19 @@ import ScrambleText from "@/libs/scrambleText.js";
 import gsap from "gsap";
 import translations from "@/translations/aboutTranslations.json";
 import {initTranslations} from "@/utils.js";
-
 const _ = initTranslations(translations)
+import {useCssVars} from "vue";
+
 
 export async function blinkingTelegram() {
   const telegram = document.querySelector('.h-telegram>svg>path')
+  const isCurrentBgWhite = getComputedStyle(document.querySelector('#about')).getPropertyValue('--color-background') === '#ffffff'
+  const color = isCurrentBgWhite ? '#5179a2' : 'white'
+
+  console.log(isCurrentBgWhite)
   gsap.to(telegram, {
-    fill: "white",
-    filter: "drop-shadow(0 0 5px white)",
+    fill: color,
+    filter: `drop-shadow(0 0 5px ${color})`,
     boxShadow: "0 0 5px white",
     yoyo: true,
     duration: .5,
@@ -21,7 +26,7 @@ export async function blinkingTelegram() {
 
 export async function executeHeaderAnimations() {
   await blinkingTelegram()
-  lockScroll(1000)
+  lockScroll(1300)
   new ScrambleText(document.getElementById('name'), {
     timeOffset: 160,
     chars: ["コ", "ー", "ヒ", "比", "ス", "阝", "プ", "ビ", "州", "ル", "ワ", "イ", "ン", "小", "贝", "比", "巴", "小", "井", "己", "工"]
