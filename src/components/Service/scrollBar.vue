@@ -5,16 +5,16 @@ import gsap from "gsap";
 
 onMounted(() => {
   window.addEventListener('scroll', function () {
-    var scrollAmount = window.scrollY;
-    var documentHeight = document.documentElement.scrollHeight;
-    var windowHeight = window.innerHeight;
-    var scrollPercent = (scrollAmount / (documentHeight - windowHeight)) * 100;
-    var roundScroll = Math.round(scrollPercent);
+    let scrollAmount = window.scrollY;
+    let documentHeight = document.documentElement.scrollHeight;
+    let windowHeight = window.innerHeight;
+    let scrollPercent = (scrollAmount / (documentHeight - windowHeight)) * 100;
+    let roundScroll = Math.round(scrollPercent);
 
     // For scrollbar 2
-    var scrollBar = document.querySelector('#scroll-down');
+    let scrollBar = document.querySelector('#scroll-down');
     if (scrollBar) {
-      var scrollBarSpan = scrollBar.querySelector('span');
+      let scrollBarSpan = scrollBar.querySelector('span');
       if (scrollBarSpan) {
         scrollBarSpan.textContent = roundScroll;
       }

@@ -1,13 +1,26 @@
 import lockScroll from "@/components/About/services.js";
 import ScrambleText from "@/libs/scrambleText.js";
 import gsap from "gsap";
-import translationStore from "@/store/global.js";
 import translations from "@/translations/aboutTranslations.json";
 import {initTranslations} from "@/utils.js";
 
 const _ = initTranslations(translations)
 
+export async function blinkingTelegram() {
+  const telegram = document.querySelector('.h-telegram>svg>path')
+  gsap.to(telegram, {
+    fill: "white",
+    filter: "drop-shadow(0 0 5px white)",
+    boxShadow: "0 0 5px white",
+    yoyo: true,
+    duration: .5,
+    repeat: -1,
+    ease: "bounce.inOut"
+  })
+}
+
 export async function executeHeaderAnimations() {
+  await blinkingTelegram()
   lockScroll(1000)
   new ScrambleText(document.getElementById('name'), {
     timeOffset: 160,
