@@ -2,6 +2,7 @@
 import {onMounted} from 'vue';
 import gsap from 'gsap';
 import {generateID} from '@/utils.js';
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const titleId = generateID('cover-title')
 const coverUniqueID = generateID('cover')
@@ -83,6 +84,7 @@ onMounted(() => {
         },
         onUpdate: (self) => {
           fixCoverBGX()
+          // ScrollTrigger.refresh()
         },
       }
     }, '<')
@@ -97,12 +99,26 @@ onMounted(() => {
     stagger: 1,
   }, '<')
 
+
+
+  // fix logo cover
+  tl.to('#' + coverUniqueID, {
+    scrollTrigger: {
+      trigger: '.portfolio-slide',
+      start: 'top top',
+      end: 'bottom bottom',
+      onUpdate: () => {
+        fixCoverBGX()
+      },
+    },
+  })
+
   // disable (logo with title) on the end of the slides
   tl.to('#' + coverUniqueID, {
     scrollTrigger: {
       trigger: '#' + slidesUniqueID,
-      start: 'bottom 99%',
-      end: 'bottom 100%',
+      start: 'bottom 25%',
+      end: 'bottom 25%',
       scrub: 1,
     },
     opacity: 0,
