@@ -1,24 +1,24 @@
 <script setup>
-import './css/header.css';
+import '@/components/Header/css/header.css';
 
-import ProfilePhoto1 from "./asserts/profilePhoto1.png";
-import ProfilePhoto2 from "./asserts/profilePhoto2.png";
-import PythonIcon2 from "@/components/About/icons/PythonIcon2.vue";
-import FastAPIicon from "@/components/About/icons/FastAPIicon.vue";
-import DjangoIcon from "@/components/About/icons/DjangoIcon.vue";
-import PostgresIcon from "@/components/About/icons/PostgresIcon.vue";
-import JSIcon from "@/components/About/icons/JSIcon.vue";
-import VueIcon from "@/components/About/icons/VueIcon.vue";
-import AutoitIcon from "@/components/About/icons/AutoitIcon.vue";
+import ProfilePhoto1 from "@/components/Header/asserts/profilePhoto1.png";
+import ProfilePhoto2 from "@/components/Header/asserts/profilePhoto2.png";
+import PythonIcon2 from "@/components/Header/icons/PythonIcon2.vue";
+import FastAPIicon from "@/components/Header/icons/FastAPIicon.vue";
+import DjangoIcon from "@/components/Header/icons/DjangoIcon.vue";
+import PostgresIcon from "@/components/Header/icons/PostgresIcon.vue";
+import JSIcon from "@/components/Header/icons/JSIcon.vue";
+import VueIcon from "@/components/Header/icons/VueIcon.vue";
+import AutoitIcon from "@/components/Header/icons/AutoitIcon.vue";
 import translations from '@/translations/aboutTranslations.json';
-import Telegram from "@/components/About/icons/telegram.vue";
-import Github from "@/components/About/icons/github.vue";
-import Linkedin from "@/components/About/icons/linkedin.vue";
+import Telegram from "@/components/Header/icons/telegram.vue";
+import Github from "@/components/Header/icons/github.vue";
+import Linkedin from "@/components/Header/icons/linkedin.vue";
 import {loader} from "@/store/global.js";
 import {onMounted, watch} from "vue";
 import TextPlugin from "gsap/TextPlugin";
 import gsap from 'gsap';
-import {executeHeaderAnimations} from "@/components/About/animations/headerAnimations.js";
+import {executeHeaderAnimations} from "@/components/Header/animations/headerAnimations.js";
 import {initTranslations} from "@/utils.js";
 
 const _ = initTranslations(translations)

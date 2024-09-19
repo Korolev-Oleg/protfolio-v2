@@ -12,7 +12,7 @@ import {EffectCoverflow, Keyboard, Mousewheel, Navigation, Pagination} from "swi
 import VideoOrGif from "./VideoOrGif.vue";
 import PreviewIcon from "@/assets/icons/PreviewIcon.vue";
 
-import GithubIcon from "@/components/About/icons/github.vue"
+import GithubIcon from "@/components/Header/icons/github.vue"
 import slides from './slides.js'
 import {runWebAnimations} from "@/components/WebProjects/animations/sectionWebAnimations.js";
 

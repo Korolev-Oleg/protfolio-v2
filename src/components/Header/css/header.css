@@ -9,7 +9,7 @@
 .hidden-socials {
     display: flex;
     gap: 9px;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 .hidden-socials svg path {
@@ -32,7 +32,8 @@
     background: var(--color-background);
     position: fixed;
     width: 100vw;
-    overflow-x: hidden;
+    overflow: hidden;
+    display: block;
     z-index:1;
     /*box-shadow: -2px 1px 20px 13px #fff*/
 }

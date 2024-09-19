@@ -1,11 +1,11 @@
 <script setup>
-import Header from "./header.vue"
+import Header from "../Header/header.vue"
 import Content from "@/components/About/content.vue";
 </script>
 
 <template>
+  <Header/>
   <section id="about">
-    <Header/>
     <Content/>
   </section>
 </template>
