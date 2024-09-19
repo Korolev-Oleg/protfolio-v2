@@ -13,4 +13,6 @@ export const loader = reactive({
   },
 })
 
-export default {translationStore, loadingProgress, loader};
+export const portfolioAnchorsList = ref([])
+
+export default {portfolioAnchorsList, translationStore, loadingProgress, loader};
