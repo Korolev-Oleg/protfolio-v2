@@ -43,7 +43,7 @@ onMounted(() => {
         @slideChange=""
         @swiper="getRef"
         :modules="modules"
-        effect="coverflow"
+        effect= "coverflow"
         grabCursor="true"
         centeredSlides="true"
         :coverflowEffect="{
@@ -57,8 +57,8 @@ onMounted(() => {
         loop="true"
         :pagination="{ el: '.swiper-pagination', clickable: true }"
         :breakpoints="{
-        640: { slidesPerView: 1 },
-        768: { slidesPerView: 1 },
+        640: { slidesPerView: 2 },
+        768: { slidesPerView: 2 },
         1024: { slidesPerView: 3 },
         1560: { slidesPerView: 4 }
       }">
