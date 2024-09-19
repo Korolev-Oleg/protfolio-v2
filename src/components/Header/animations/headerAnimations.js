@@ -88,7 +88,7 @@ export async function executeHeaderAnimations() {
     .to('.h-telegram', {display: 'block', opacity: 1}, '-=.1')
     .to('.h-github', {display: 'block', opacity: 1}, '-=.1')
     .to('.h-linkedin', {display: 'block', opacity: 1}, '-=.1')
-    .fromTo('#profile-photo-2', {opacity: 0}, {y: -300, opacity: 1}, '-=1.8')
+    .fromTo('#profile-photo-2', {opacity: 0}, {y: -298, opacity: 1}, '-=1.8')
     .to('#profile-photo', {opacity: 0, duration: 1, x: -100, y: -100}, '>')
   return null
 }

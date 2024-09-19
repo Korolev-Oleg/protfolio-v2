@@ -97,4 +97,5 @@ img {
 
 .hidden-container{
     margin-left: 28px;
+    min-width: 163px;
 }
