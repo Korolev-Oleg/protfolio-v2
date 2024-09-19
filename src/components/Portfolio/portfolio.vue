@@ -67,16 +67,15 @@ onMounted(() => {
 
 <template>
   <section id="portfolio" :ref="portfolio">
-    <PortfolioCover :Icon="TendManagerIcon" title="TendManager">
-      <PortfolioSlide class="portfolio-slide" :images="[TendManager1]"
-                      maxHeight="639px"
-                      :description="_('tend-manager-slide-1')"/>
-      <PortfolioSlide class="portfolio-slide" :images="[TendManager3]"
-                      :description="_('tend-manager-slide-3')"/>
-      <PortfolioSlide class="portfolio-slide" :images="[TendManager2]"
-                      :description="_('tend-manager-slide-2')"/>
-      <PortfolioSlide class="portfolio-slide" :images="[TendManager4]"
-                      :description="_('tend-manager-slide-4')"/>
+    <PortfolioCover :Icon="TitanControlIcon" title="TitanControl">
+      <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide1]"
+                      :description="_('titan-control-slide-1')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide2]"
+                      :description="_('titan-control-slide-2')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide3]"
+                      :description="_('titan-control-slide-3')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide4]"
+                      :description="_('titan-control-slide-4')"/>
     </PortfolioCover>
     <PortfolioCover :Icon="ProdlogisticaIcon" title="Prodlogistica">
       <PortfolioSlide class="portfolio-slide" :images="[ProdlogisticaSlide1]"
@@ -88,15 +87,16 @@ onMounted(() => {
       <PortfolioSlide class="portfolio-slide" :images="[ProdlogisticaSlide4]"
                       :description="_('prodlogistica-slide-4')"/>
     </PortfolioCover>
-    <PortfolioCover :Icon="TitanControlIcon" title="TitanControl">
-      <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide1]"
-                      :description="_('titan-control-slide-1')"/>
-      <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide2]"
-                      :description="_('titan-control-slide-2')"/>
-      <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide3]"
-                      :description="_('titan-control-slide-3')"/>
-      <PortfolioSlide class="portfolio-slide" :images="[TitanControlSlide4]"
-                      :description="_('titan-control-slide-4')"/>
+    <PortfolioCover :Icon="TendManagerIcon" title="TendManager">
+      <PortfolioSlide class="portfolio-slide" :images="[TendManager1]"
+                      maxHeight="639px"
+                      :description="_('tend-manager-slide-1')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[TendManager3]"
+                      :description="_('tend-manager-slide-3')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[TendManager2]"
+                      :description="_('tend-manager-slide-2')"/>
+      <PortfolioSlide class="portfolio-slide" :images="[TendManager4]"
+                      :description="_('tend-manager-slide-4')"/>
     </PortfolioCover>
 
   </section>

@@ -10,6 +10,7 @@ const coverIconUniqueID = generateID('cover-icon')
 const slidesUniqueID = generateID('slides')
 const timeLineUniqueID = generateID('timeline')
 
+gsap.registerPlugin(ScrollTrigger)
 
 const props = defineProps({
   Icon: Object,
@@ -123,6 +124,7 @@ onMounted(() => {
     },
     opacity: 0,
   })
+
 })
 </script>
 
