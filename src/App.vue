@@ -5,10 +5,11 @@ import {loadResources, syncLocale} from '@/utils.js';
 
 import LoadingScreen from "@/components/Service/LoadingScreen.vue";
 import ScrollBar from "@/components/Service/scrollBar.vue";
-import About from "@/components/About/about.vue";
+import About from "@/components/Content/about.vue";
 import Portfolio from "@/components/Portfolio/portfolio.vue"
 import WebProjects from "@/components/WebProjects/WebProjects.vue";
 import Footer from "@/components/Footer/footer.vue";
+import Header from "@/components/Header/header.vue";
 
 
 onMounted(() => {
@@ -21,6 +22,7 @@ onMounted(() => {
 <template>
   <LoadingScreen/>
   <ScrollBar/>
+  <Header/>
   <About/>
   <Portfolio/>
   <WebProjects/>
