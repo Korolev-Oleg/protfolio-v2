@@ -22,19 +22,14 @@ onMounted(() => {
 <template>
   <footer>
     <div class="row">
-      <p>{{_('soul-title')}}</p>
-      <div class="icons">
-        <a href="https://www.figma.com/design/YDCaTj1eoUg4FhTlPsKXBI/Untitled?node-id=18-16968&t=EoZa8WinitgN2kJs-1" target="_blank">
-          <Figma/>
-        </a>
-      </div>
-    </div>
-    <div class="row">
       <p>{{_('mind-title')}}</p>
       <div class="icons">
         <PyCharm/>
         <VueColored/>
         <GsapIcon/>
+        <a href="https://www.figma.com/design/YDCaTj1eoUg4FhTlPsKXBI/Untitled?node-id=18-16968&t=EoZa8WinitgN2kJs-1" target="_blank">
+          <Figma/>
+        </a>
       </div>
     </div>
     <div class="row">
