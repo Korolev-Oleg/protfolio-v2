@@ -2,6 +2,10 @@
 import {onMounted} from "vue";
 import ChevronDownIcon from "@/components/Service/ChevronDownIcon.vue";
 import gsap from "gsap";
+import {portfolioAnchorsList} from "@/store/global.js"
+
+const nextAnchor = () => {
+}
 
 onMounted(() => {
   window.addEventListener('scroll', function () {
@@ -34,18 +38,23 @@ onMounted(() => {
 
 <template>
   <div class="scrollBar"><span></span></div>
-  <div id="scroll-down"><ChevronDownIcon/> <span>0</span>%</div>
+  <div id="scroll-down" @click="nextAnchor()">
+    <ChevronDownIcon/>
+    <span>0</span>%
+  </div>
 </template>
 
 <style scoped>
-#scroll-down{
+#scroll-down {
   height: 10px;
   position: fixed;
   z-index: 200;
   bottom: 25px;
   width: 100%;
   text-align: center;
+  cursor: pointer;
 }
+
 .scrollBar {
   position: fixed;
   top: 0;
@@ -87,7 +96,8 @@ onMounted(() => {
     }
   }
 }
-@media (max-width:768px) {
+
+@media (max-width: 768px) {
   .scrollBar {
     right: .5rem;
   }

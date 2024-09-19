@@ -10,7 +10,6 @@ import Portfolio from "@/components/Portfolio/portfolio.vue"
 import WebProjects from "@/components/WebProjects/WebProjects.vue";
 import Footer from "@/components/Footer/footer.vue";
 import Header from "@/components/Header/header.vue";
-import ScrollTrigger from "gsap/ScrollTrigger";
 
 
 onMounted(() => {

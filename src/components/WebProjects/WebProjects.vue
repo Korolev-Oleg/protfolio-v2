@@ -18,10 +18,11 @@ import {runWebAnimations} from "@/components/WebProjects/animations/sectionWebAn
 
 const swiperRef = ref(null);
 const modules = [Navigation, EffectCoverflow, Keyboard, Mousewheel, Pagination]
-function getRef (swiperInstance) {
+
+function getRef(swiperInstance) {
   swiperRef.value = swiperInstance
-  console.log(swiperInstance)
 }
+
 gsap.registerPlugin(ScrollTrigger)
 onMounted(() => {
   let swiper = swiperRef.value

@@ -37,12 +37,10 @@ onMounted(() => {
           scrub: 1,
           anticipatePin: 1,
           onEnter: () => {
-            console.log('onEnter')
             document.getElementById(timeLineUniqueID).style.display = 'block'
             document.getElementById(coverUniqueID).classList.add('cover-fixed')
           },
           onLeaveBack: () => {
-            console.log('onLeaveBack')
             document.getElementById(timeLineUniqueID).style.display = 'none'
             return document.getElementById(coverUniqueID).classList.remove('cover-fixed')
           },

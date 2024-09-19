@@ -12,7 +12,6 @@ export async function blinkingTelegram() {
   const isCurrentBgWhite = getComputedStyle(document.querySelector('#about')).getPropertyValue('--color-background') === '#ffffff'
   const color = isCurrentBgWhite ? '#5179a2' : 'white'
 
-  console.log(isCurrentBgWhite)
   gsap.to(telegram, {
     fill: color,
     filter: `drop-shadow(0 0 5px ${color})`,

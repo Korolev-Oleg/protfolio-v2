@@ -23,7 +23,7 @@ watch(loader.isLoading, (isLoading) => {
           ref="number"
           :to="loader.progress"
           :format="(n)=>n.toFixed(0)"
-          duration=".5"
+          duration=.5
       />
     </p>
   </div>

@@ -2,6 +2,7 @@
 import {onMounted} from 'vue';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import {portfolioAnchorsList} from "@/store/global.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,6 +29,8 @@ onMounted(() => {
   const tl = gsap.timeline();
   const slide = document.getElementById(slideUniqueId);
   const media = gsap.matchMedia();
+
+  portfolioAnchorsList.value.push("#" + slideUniqueId)
 
   media.add({
     isDesktop: `(min-width: 800px)`,

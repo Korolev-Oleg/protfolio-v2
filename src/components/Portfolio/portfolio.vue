@@ -61,7 +61,6 @@ onMounted(() => {
     backgroundColor: '#000'
   }, '>');
 
-  console.log(translations)
 });
 </script>
 
