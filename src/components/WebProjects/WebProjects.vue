@@ -32,6 +32,12 @@ onMounted(() => {
       trigger: "#web-projects",
       start: "top center",
       end: "center center",
+      onEnter: () => {
+        document.getElementsByClassName('swiper-pagination-bullet')[0].click()
+      },
+      onEnterBack: () => {
+        document.getElementsByClassName('swiper-pagination-bullet')[0].click()
+      }
     }
   })
 })

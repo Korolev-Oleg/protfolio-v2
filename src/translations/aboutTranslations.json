@@ -1,8 +1,8 @@
 {
   "en": {
     "name": "Oleg Korolev",
-    "about-citation-1": "— For me, `BACKEND` is a way to bring the greatest benefit to people.",
-    "about-citation-2": "— `FRONTEND` is a way to express my creativity.",
+    "about-citation-1": "— For me, `BACKEND` is a way to bring the greatest benefit to business.",
+    "about-citation-2": "— `FRONTEND` is a possibility to express my creativity.",
     "about-2015": "• 2015: Automation of games. My journey as a developer began in my school years. I was passionate about automating game processes and gaining advantages over other players using my own code in AutoIt.",
     "about-2016": "• 2016: My first freelance job. My computer science teacher noticed how students gathered around my computer to see how I made a cookie from Cookie Clicker automatically accumulate experience in the background. Soon after, the teacher approached me with a request to restore the website of the city’s Multifunctional Center, for which the hosting access had been lost by the administration. Intrigued by the challenge, I agreed without hesitation.",
     "about-2017": "• 2017: First orders. After mastering the basics of web development such as HTML, CSS, and JavaScript, I started taking my first orders. These were simple projects for small companies and individuals, mainly landing pages and business cards.",
@@ -13,8 +13,8 @@
   },
   "ru": {
     "name": "Олег Королев",
-    "about-citation-1": "— Для меня `BACKEND` - это способ приносить наибольшую пользу людям",
-    "about-citation-2": "— `FRONTEND` - это способ проявить свое творческое начало",
+    "about-citation-1": "— Для меня `BACKEND` - это способ приносить наибольшую пользу бизнесу",
+    "about-citation-2": "— `FRONTEND` - возможность проявить свое творческое начало",
     "about-2015": "• 2015 год: Автоматизация игр.\n      Мой путь разработчика начался еще в школьные годы. Я был увлечен автоматизацией игрового процесса и получением\n      преимуществ над другими игроками с помощью собственного кода на AutoIt",
     "about-2016": "• 2016 год: Первая подработка.\n      Мой преподаватель информатики обратил внимание на то, как ребята собрались вокруг моего компьютера, чтобы\n      увидеть, как я заставил печеньку из Cookie Clicker автоматически накапливать опыт в фоновом режиме. Вскоре\n      после этого преподаватель обратился ко мне с просьбой восстановить сайт городского МФЦ, доступы к хостингу\n      которого, были утеряны администрацией. Заинтересовавшись задачей, я без колебаний согласился.",
     "about-2017": "• 2017 год: Первые заказы.\n      Освоив основы веб-разработки, такие как HTML, CSS и JavaScript, я начал брать свои первые заказы. Это были\n      простые проекты для небольших компаний и частных лиц, в основном лендинги и визитные карточки.",

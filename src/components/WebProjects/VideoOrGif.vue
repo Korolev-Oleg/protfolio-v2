@@ -1,5 +1,4 @@
 <script setup>
-import {onMounted} from 'vue'
 import {getDeviceType} from '@/utils.js'
 
 const props = defineProps({
