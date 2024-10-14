@@ -1,10 +1,10 @@
-import lockScroll from "@/components/Content/services.js";
+import {lockScroll} from "@/components/Content/services.js";
 import ScrambleText from "@/libs/scrambleText.js";
 import gsap from "gsap";
 import translations from "@/translations/aboutTranslations.json";
 import {initTranslations} from "@/utils.js";
+
 const _ = initTranslations(translations)
-import {useCssVars} from "vue";
 
 
 export async function blinkingTelegram() {
@@ -67,7 +67,7 @@ export async function executeHeaderAnimations() {
     .to('.img-mask', {height: 109, width: 117, duration: 1}, '<')
     .to('#profile-photo', {y: -52, x: -50, duration: 1}, '<')
     .to('#name', {x: '-100vw'}, '<')
-    .to('#image-title', {y: '-100vh', x: -10} , '<')
+    .to('#image-title', {y: '-100vh', x: -10}, '<')
     .to('#python', {text: ''}, '<')
     .to('#python-icon', {opacity: 0}, '<')
     .to('#fastapi', {text: ''}, '<')
